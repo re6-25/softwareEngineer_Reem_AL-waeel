@@ -1,0 +1,18 @@
+   body { background:#f4f7fa;font-family:'Cairo',Arial,sans-serif; margin:0; }
+        .container { max-width:700px; margin:40px auto; background:#fff; border-radius:18px; box-shadow:0 2px 24px #d3c0ef22; padding:30px 25px;}
+        .book-header { display:flex; gap:25px; align-items:flex-start; }
+        .book-cover { width:160px; height:220px; border-radius:10px; object-fit:cover; box-shadow:0 2px 16px #a390e419; }
+        .book-info { flex:1; }
+        .book-title { font-size:2em; color:#7157c7; font-weight:bold; margin-bottom:12px; }
+        .book-meta { color:#666; margin-bottom:15px; font-size:1.08em; }
+        .badge { display:inline-block; background:#f9c846; color:#fff; font-size:.92em; padding:2px 13px; border-radius:8px; margin-left:10px;}
+        .fav-btn { color: #e75e5e; background: none; border: none; font-size: 1.4em; cursor: pointer;}
+        .add-cart { background:#a390e4; color:#fff; padding:8px 22px; border:none; border-radius:10px; font-weight:bold; font-size:1em; cursor:pointer; margin-left:8px;}
+        .desc { margin:18px 0 22px 0; color:#393e46; font-size:1.05em;}
+        .section-title { color:#7157c7;font-size:1.15em; font-weight:bold; margin:32px 0 14px 0; }
+        .review-card { background:#f9f3fa; border-radius:11px; padding:12px 18px; margin-bottom:10px;}
+        .star { color:#f9c846; font-size:1.12em;}
+        .comment-box, .reply-box { margin:12px 0; }
+        .comment-card { background:#f8f7fd; border-radius:10px; padding:12px; margin-bottom:10px; }
+        .reply-card { background:#f4f2fa; border-radius:8px; padding:8px 15px; margin:6px 0 0 35px; color:#7157c7; font-size:.97em;}
+  

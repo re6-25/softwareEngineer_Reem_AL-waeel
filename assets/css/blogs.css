@@ -1,0 +1,108 @@
+body {
+    font-family: 'Cairo', Arial, sans-serif;
+    margin: 0;
+    background: #f8f7fc;
+}
+.container {
+    max-width: 900px;
+    margin: 38px auto 0 auto;
+    padding: 10px;
+}
+.section-title {
+    font-size: 1.23rem;
+    color: #7157c7;
+    font-weight: bold;
+    margin: 27px 0 13px;
+}
+
+.blog-add-form {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px #b3a0d823;
+    padding: 24px 18px;
+    margin-bottom: 18px;
+    max-width: 700px;
+}
+.blog-add-form input[type="text"],
+.blog-add-form textarea {
+    width: 100%;
+    padding: 11px 13px;
+    border: 1.5px solid #e6e1f4;
+    border-radius: 9px;
+    margin-bottom: 14px;
+    font-family: 'Cairo', Arial, sans-serif;
+    font-size: 1em;
+    background: #faf8ff;
+    transition: border .18s;
+}
+.blog-add-form input[type="text"]:focus,
+.blog-add-form textarea:focus {
+    border-color: #a390e4;
+    outline: none;
+}
+.blog-add-form button {
+    background: #a390e4;
+    color: #fff;
+    border: none;
+    border-radius: 9px;
+    padding: 10px 30px;
+    font-size: 1.09em;
+    font-family: 'Cairo', Arial, sans-serif;
+    cursor: pointer;
+    transition: background .18s;
+}
+.blog-add-form button:hover {
+    background: #7157c7;
+}
+
+.success-msg {
+    background: #def9e3;
+    color: #44a870;
+    border-radius: 9px;
+    padding: 11px 18px;
+    margin-bottom: 17px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.blog-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #b9b1ea13;
+    padding: 15px 20px;
+    margin-bottom: 18px;
+}
+.blog-title {
+    font-weight: bold;
+    color: #a390e4;
+    font-size: 1.23rem;
+    margin-bottom: 8px;
+}
+.blog-meta {
+    font-size: .97rem;
+    color: #888;
+    margin-bottom: 7px;
+}
+.blog-content {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 8px;
+}
+.btn {
+    background: #a390e4;
+    color: #fff;
+    padding: 7px 19px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-right: 8px;
+    display: inline-block;
+    transition: background .18s;
+}
+.btn:hover {
+    background: #7157c7;
+}
+
+@media (max-width:900px){
+    .container {padding-left:6px; padding-right:6px;}
+    .blog-add-form {max-width:100%;}
+}
