@@ -1,0 +1,24 @@
+<?php
+class Database {
+    private $host = "sql305.infinityfree.com";
+    private $db   = "if0_39270183_books";
+    private $user = "if0_39270183";
+    private $pass = "هنا_كلمة_المرور"; // ضع كلمة مرور حسابك في InfinityFree
+    private $port = 3306;
+    public $conn;
+
+    public function __construct() {
+        $dsn = "mysql:host=$this->host;dbname=$this->db;port=$this->port;charset=utf8mb4";
+        try {
+            $this->conn = new PDO($dsn, $this->user, $this->pass);
+            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch (PDOException $e) {
+            die("فشل الاتصال بقاعدة البيانات: " . $e->getMessage());
+        }
+    }
+
+    public function close() {
+        $this->conn = null;
+    }
+}
+?>

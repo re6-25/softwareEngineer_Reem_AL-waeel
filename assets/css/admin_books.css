@@ -1,0 +1,134 @@
+body {
+    width: 100%;
+    font-family: 'Cairo', Tahoma, Arial;
+    background: #f8f7fc;
+    padding: 25px;
+}
+
+.container {
+    background: #fff;
+    border-radius: 18px;
+    padding: 26px;
+    box-shadow: 0 4px 30px #d3c0ef33;
+    max-width: 1150px;
+    margin: auto;
+    overflow-x: auto;
+}
+
+h1, h3 {
+    color: #5d3fd3;
+    font-weight: bold;
+    border-right: 4px solid #d3c0ef;
+    padding-right: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 1.02rem;
+    min-width: 1100px;
+}
+
+th, td {
+    border: 1px solid #ececec;
+    padding: 9px 8px;
+    text-align: center;
+}
+
+th {
+    background: #f3f0fa;
+    font-weight: 700;
+}
+
+tr:nth-child(even) {
+    background: #faf7fd;
+}
+
+.btn {
+    padding: 6px 13px;
+    border-radius: 8px;
+    border: none;
+    background: #a390e4;
+    color: #fff;
+    cursor: pointer;
+    margin: 2px 2px;
+}
+
+.btn:hover {
+    background: #7157c7;
+}
+
+.btn-danger {
+    background: #c84646 !important;
+}
+
+.msg {
+    background: #f9c846;
+    padding: 10px 18px;
+    border-radius: 11px;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+input,
+select {
+    padding: 7px;
+    border-radius: 6px;
+    border: 1px solid #e0def0;
+    font-size: 0.95rem;
+    max-width: 140px;
+}
+
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin-right: 3px;
+}
+
+input[type="file"] {
+    padding: 4px;
+    font-size: 0.9rem;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    max-width: 140px;
+}
+
+img.cover {
+    width: 50px;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 4px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+@media (max-width: 900px) {
+    .container {
+        padding: 5px;
+    }
+
+    table {
+        font-size: .94rem;
+    }
+
+    input,
+    select {
+        width: 85px;
+    }
+}

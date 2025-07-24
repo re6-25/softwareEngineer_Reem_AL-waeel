@@ -1,0 +1,75 @@
+body {
+    font-family:'Cairo',Arial,sans-serif;
+    background:#f4f7fa;
+}
+.game-wrapper {
+    margin-right:240px;
+    padding:40px 20px;
+}
+.games-grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:26px;
+}
+.game-card {
+    background:#fff;
+    border-radius:16px;
+    box-shadow:0 2px 16px #a390e421;
+    text-align:center;
+    padding:34px 19px 24px;
+    transition: box-shadow .18s, transform .18s;
+}
+.game-card:hover {
+    box-shadow:0 10px 32px #a390e44a;
+    transform: scale(1.03) translateY(-4px) rotate(-1.5deg);
+}
+.game-icon {
+    font-size:3.7em;
+    margin-bottom:15px;
+}
+.game-title {
+    font-size:1.17em;
+    font-weight:bold;
+    color:#6d58b3;
+}
+.game-desc {
+    color:#85858b;
+    font-size:1em;
+    margin-bottom:15px;
+}
+.start-btn {
+    background:#a390e4;
+    color:#fff;
+    border:none;
+    padding:11px 32px;
+    border-radius:9px;
+    font-weight:bold;
+    font-size:1em;
+    cursor:pointer;
+    box-shadow: 0 4px 20px #a390e420;
+    transition: background .16s, color .16s, transform .15s;
+}
+.start-btn:hover {
+    background:#f9c846;
+    color:#393e46;
+    transform: translateY(-3px) scale(1.04) rotate(-1.5deg);
+    box-shadow: 0 8px 30px #f9c84650;
+}
+.points-box {
+    background:#e1d5f9;
+    color:#7157c7;
+    padding:13px 21px;
+    border-radius:13px;
+    display:inline-block;
+    margin:23px 0;
+    font-size:1.14em;
+}
+@media(max-width:700px){
+    .game-wrapper {margin-right:0;padding:18px 5px;}
+    .games-grid {gap:13px;}
+}
+.quiz-box {background:#fff;padding:28px 33px;border-radius:15px;box-shadow:0 2px 14px #7157c72b;max-width:470px;margin:38px auto;}
+      .question {margin:15px 0;}
+      .btn {background:#a390e4;color:#fff;border:none;padding:9px 24px;border-radius:9px;font-weight:bold;cursor:pointer;}
+      .result {background:#e4f8ec;color:#258850;padding:15px;margin-top:17px;border-radius:8px;font-size:1.2em;text-align:center;}
+      .quiz-title {text-align:center;font-size:1.3em;margin-bottom:16px;}

@@ -1,0 +1,35 @@
+body { background: #f4f7fa; font-family: 'Cairo', Arial, sans-serif; }
+        .container { background: #fff; margin: 40px auto; padding: 35px 30px; border-radius: 18px; max-width: 700px; box-shadow: 0 4px 20px #e7e0f6; }
+        .book-title { font-size: 1.7em; color: #7157c7; font-weight: bold; margin-bottom: 13px; }
+        .book-author, .book-meta { color: #666; margin-bottom: 7px; }
+        .book-desc { margin: 17px 0 24px 0; color: #222; }
+        .pdf-viewer { margin: 24px 0 36px 0; }
+        .comments-block { margin-top: 34px; }
+        .comment-card { background: #f7f6fd; border-radius: 11px; padding: 14px; margin-bottom: 14px; }
+        .reply-card { background: #fcf1e3; border-radius: 9px; padding: 7px 11px; margin-top: 6px; color: #9c7a38; margin-right: 15px;}
+        .user-name { color: #9b70d5; font-weight: bold; }
+        .btn {
+            background: #a390e4;
+            color: #fff;
+            border: none;
+            padding: 9px 22px;
+            border-radius: 9px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background .2s;
+        }
+        .btn:hover { background: #7157c7; }
+        .msg-success {
+            background: #e4f8ec;
+            color: #258850;
+            border-radius: 10px;
+            padding: 10px 15px;
+            margin: 18px 0 10px 0;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            border: 1px solid #a390e4;
+        }
+        @media (max-width:700px) {
+            .pdf-viewer iframe { height: 320px !important; }
+        }

@@ -1,0 +1,124 @@
+
+        body {
+            background: #f4f7fa;
+            font-family: 'Cairo', Arial, sans-serif;
+            margin: 0;
+            min-height: 100vh;
+        }
+
+       
+        .content {
+            flex: 1;
+            padding: 50px 32px 20px 20px;
+            margin-right: 220px;
+        }
+
+        .dash-title {
+            font-size: 2rem;
+            color: #7157c7;
+            font-weight: bold;
+            margin-bottom: 34px;
+            letter-spacing: 1px;
+        }
+
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+            gap: 28px;
+            margin-bottom: 33px;
+        }
+
+        .stat-card {
+            background: #fff;
+            border-radius: 17px;
+            box-shadow: 0 1px 18px #a390e415;
+            padding: 27px 19px 22px 19px;
+            text-align: center;
+            transition: box-shadow .18s, transform .15s;
+            border: 1.8px solid #f4f0fb;
+        }
+
+        .stat-card:hover {
+            box-shadow: 0 6px 28px #a390e427;
+            transform: translateY(-7px) scale(1.04);
+        }
+
+        .stat-icon {
+            font-size: 2.4rem;
+            margin-bottom: 10px;
+            color: #a390e4;
+        }
+
+        .stat-label {
+            color: #393e46;
+            font-size: 1.09rem;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .stat-num {
+            font-size: 2.18rem;
+            color: #f9c846;
+            font-weight: bold;
+        }
+
+        @media (max-width:900px) {
+            .main-wrapper {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                position: static;
+                width: 100%;
+                flex-direction: row;
+                border: none;
+                height: auto;
+                min-height: unset;
+            }
+
+            .content {
+                margin-right: 0;
+                padding: 15px;
+            }
+
+            .sidebar-logo {
+                margin: 18px;
+            }
+
+            .sidebar-menu {
+                flex-direction: row;
+            }
+
+            .sidebar-menu a {
+                margin: 0 4px 0 0;
+                border-radius: 13px;
+            }
+        }
+
+        @media (max-width:600px) {
+            .content {
+                padding: 7px !important;
+            }
+
+            .dash-title {
+                font-size: 1.12em;
+                margin-bottom: 13px;
+            }
+
+            .stats-row {
+                grid-template-columns: 1fr;
+                gap: 12px;
+                margin-bottom: 18px;
+            }
+
+            .stat-card {
+                padding: 12px 7px 13px 7px;
+                border-radius: 11px;
+                font-size: .97em;
+            }
+
+            #adminStatsChart {
+                max-width: 98vw !important;
+                height: 220px !important;
+            }
+        }
