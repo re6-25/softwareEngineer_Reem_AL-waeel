@@ -63,8 +63,7 @@
     <a href="{% url 'home:gallery' %}"><button>عرض الصور وتعديلها</button></a>
   </div>
 
-  <form method="post">
-    {% csrf_token %}
+  <form>
     <textarea name="text" placeholder="اكتب النص هنا...">{{ input_text }}</textarea><br />
     <button type="submit">حوّل للنص باللهجة اليمنية</button>
   </form>

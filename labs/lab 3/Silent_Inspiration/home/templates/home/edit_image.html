@@ -70,7 +70,6 @@
   <h1>تعديل بيانات الصورة 🖼️</h1>
 
   <form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">تحديث</button>
   </form>

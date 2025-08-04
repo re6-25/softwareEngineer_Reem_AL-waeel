@@ -68,9 +68,7 @@
 </head>
 <body>
   <h1>إضافة صورة جديدة 📸</h1>
-
   <form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">حفظ</button>
   </form>
