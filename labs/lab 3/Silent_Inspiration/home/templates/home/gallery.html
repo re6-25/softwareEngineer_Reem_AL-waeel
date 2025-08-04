@@ -1,0 +1,104 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>معرض الصور التراثية</title>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Amiri', serif;
+      background: url("{% static 'images/yemeni_pattern.jpg' %}") no-repeat center center fixed;
+      background-size: cover;
+      direction: rtl;
+      text-align: center;
+      color: #fff4e3;
+      padding: 30px;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin-bottom: 30px;
+      background: rgba(0, 0, 0, 0.6);
+      display: inline-block;
+      padding: 15px 30px;
+      border-radius: 15px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .image-box {
+      background: rgba(255, 255, 255, 0.8);
+      padding: 15px;
+      border-radius: 12px;
+      width: 300px;
+      box-shadow: 0 5px 10px #00000088;
+      color: #000;
+    }
+
+    .image-box img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .btns {
+      margin-top: 10px;
+    }
+
+    .btns a {
+      text-decoration: none;
+      padding: 6px 14px;
+      background-color: #7b4e22;
+      color: white;
+      border-radius: 8px;
+      margin: 0 5px;
+      display: inline-block;
+    }
+
+    .btns a:hover {
+      background-color: #a06a30;
+    }
+
+    .add-link {
+      display: inline-block;
+      margin-bottom: 30px;
+      padding: 10px 20px;
+      background-color: #a06a30;
+      color: white;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .add-link:hover {
+      background-color: #7b4e22;
+    }
+  </style>
+</head>
+<body>
+  <h1>معرض الصور التراثية اليمنية 🏞️</h1>
+
+  <div>
+    <a href="{% url 'home:add_image' %}" class="add-link">➕ إضافة صورة جديدة</a>
+  </div>
+
+  <div class="gallery">
+    {% for image in images %}
+    <div class="image-box">
+      <img src="{{ image.image.url }}" alt="صورة تراثية">
+      <div class="btns">
+        <a href="{% url 'home:edit_image' image.id %}">تعديل</a>
+        <a href="{% url 'home:delete_image' image.id %}">حذف</a>
+      </div>
+    </div>
+    {% empty %}
+    <p>لا توجد صور بعد. أضف أول صورة!</p>
+    {% endfor %}
+  </div>
+</body>
+</html>
