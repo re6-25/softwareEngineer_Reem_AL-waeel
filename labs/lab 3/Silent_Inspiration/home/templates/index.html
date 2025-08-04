@@ -90,6 +90,14 @@
 
 <body>
   <h1>مرحبًا {{ username }} في تراث اليمن 🇾🇪</h1>
+  <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 40px;">
+    <img src="{% static 'images/ibb.jpg' %}" alt="إب"
+      style="width: 300px; border-radius: 15px; box-shadow: 0 4px 10px #00000066;">
+    <img src="{% static 'images/ibb2.jpg' %}" alt="بعدان"
+      style="width: 300px; border-radius: 15px; box-shadow: 0 4px 10px #00000066;">
+    <img src="{% static 'images/aden.jpg' %}" alt="صنعاء"
+      style="width: 300px; border-radius: 15px; box-shadow: 0 4px 10px #00000066;">
+  </div>
   <form method="post">
     {% csrf_token %}
     <textarea name="text" placeholder="اكتب النص هنا...">{{ input_text }}</textarea><br />
@@ -102,4 +110,5 @@
   </div>
   {% endif %}
 </body>
+
 </html>
