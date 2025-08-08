@@ -1,4 +1,5 @@
 {% load static %}
+{% load yemen_word %}
 <!DOCTYPE html>
 <html lang="ar">
 
@@ -53,6 +54,7 @@
       word-break: break-word;
     }
   </style>
+
 </head>
 
 <body>
@@ -63,15 +65,16 @@
     <a href="{% url 'home:gallery' %}"><button>عرض الصور وتعديلها</button></a>
   </div>
 
-  <form>
-    <textarea name="text" placeholder="اكتب النص هنا...">{{ input_text }}</textarea><br />
-    <button type="submit">حوّل للنص باللهجة اليمنية</button>
+  <form method="post">
+    {% csrf_token %}
+    <textarea name="النص" placeholder="اكتب نص هنا...">{{ النص_المدخل }}</textarea><br>
+    <button type="submit">حول للنص باللهجة اليمنية</button>
   </form>
 
-  {% if converted_text %}
+  {% if النص_المحول %}
   <div class="result">
     <h3>النص باللهجة اليمنية:</h3>
-    <p>{{ converted_text }}</p>
+    <p>{{ النص_المحول }}</p>
   </div>
   {% endif %}
 </body>
