@@ -59,24 +59,23 @@
 
 <body>
   <h1>مرحبًا {{ username }} في تراث اليمن 🇾🇪</h1>
-<p>jhgvghvjk</p>
+
   <div>
     <a href="{% url 'home:add_image' %}"><button>إضافة صورة جديدة</button></a>
     <a href="{% url 'home:gallery' %}"><button>عرض الصور وتعديلها</button></a>
   </div>
+<form method="post">
+  {% csrf_token %}
+  <textarea name="النص" placeholder="اكتب نص هنا...">{{ النص_مدخل }}</textarea><br>
+  <button type="submit">حول للنص باللهجة اليمنية</button>
+</form>
 
-  <form method="post">
-    {% csrf_token %}
-    <textarea name="النص" placeholder="اكتب نص هنا...">{{ النص_المدخل }}</textarea><br>
-    <button type="submit">حول للنص باللهجة اليمنية</button>
-  </form>
-
-  {% if النص_المحوّل %}
-  <div class="result">
-    <h3>النص باللهجة اليمنية:</h3>
-    <p>{{ النص_المحوّل }}</p>
-  </div>
-  {% endif %}
+{% if النص_مدخل %}
+<div class="result">
+  <h3>النص باللهجة اليمنية:</h3>
+  <p>{{ النص_مدخل|yemen_word }}</p>
+</div>
+{% endif %}
 </body>
 
 </html>

@@ -81,10 +81,9 @@
   </style>
 </head>
 <body>
-  <h1>معرض الصور التراثية اليمنية 🏞️</h1>
-
+  <h1>معرض الصور التراثية اليمنية </h1>
   <div>
-    <a href="{% url 'home:add_image' %}" class="add-link">➕ إضافة صورة جديدة</a>
+    <a href="{% url 'home:add_image' %}" class="add-link"> إضافة صورة جديدة</a>
   </div>
 
   <div class="gallery">
@@ -97,8 +96,15 @@
       </div>
     </div>
     {% empty %}
-    <p>لا توجد صور بعد. أضف أول صورة!</p>
+    <p>لا توجد صور بعد أضف أول صورة!</p>
     {% endfor %}
   </div>
+
+  <h2>
+
+    .
+  </h2>
+<a href="{% url 'home:home' %}" class="back-link" style="color: #7b4e22;padding-top: 10px;margin-top: 10px;">← رجوع للرئيسية</a>
+
 </body>
 </html>

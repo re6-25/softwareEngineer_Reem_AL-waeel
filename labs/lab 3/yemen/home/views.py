@@ -5,10 +5,12 @@ from .models import YemeniImage
 
 def home(request):
     username = request.session.get('username', 'زائر')
-    input_text = request.GET.get('text', '')
+    النص_مدخل = ''
+    if request.method == 'POST':
+        النص_مدخل = request.POST.get('النص', '')
     return render(request, 'index.html', {
         'username': username,
-        'input_text': input_text,
+        'النص_مدخل': النص_مدخل,
     })
 
 
