@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+  <meta charset="UTF-8">
+  <title>تسجيل الدخول - تراث اليمن</title>
+</head>
+<style>
+  body {
+    font-family: 'Aref Ruqaa', serif;
+    background-image: url("../images/yemeni_pattern.jpg");
+    background-size: cover;
+    background-position: center;
+    direction: rtl;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .box {
+    background: rgba(255, 255, 255, 0.9);
+    border: 3px dashed #8b3f00ce;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    width: 320px;
+  }
+
+  h2 {
+    color: #8b2c00cf;
+    margin-bottom: 20px;
+  }
+
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #8b2e00df;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+    background: #8b2e00df;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background: #8b2e00df;
+  }
+</style>
+<body>
+  <div class="container">
+    <div class="box">
+      <h2>مرحباً بك في موقع تراث اليمن  سجل دخول </h2>
+      <form method="post">
+         {% csrf_token %}
+        <input type="text" name="username" placeholder="اسم المستخدم" required>
+        <input type="password" name="password" placeholder="كلمة المرور" required>
+        <button type="submit">دخول</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
