@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}صفحة المعلمين{% endblock %}
+
+{% block content %}
+<h1 style="text-align:center;">جدول المعلمين</h1>
+<table>
+    <thead>
+      <tr>
+          <th>الاسم</th>
+          <th>المقرر</th>
+          <th>رقم الهاتف</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for teacher in teachers %}
+      <tr {% if teacher.phone|slice:"-1:" == "7" %} style="background-color: rgb(35, 171, 173); color: white;" {% endif %}>
+          <td>{{ teacher.name }}</td>
+          <td>{{ teacher.subject }}</td>
+          <td>{{ teacher.phone }}</td>
+      </tr>
+    {% empty %}
+      <tr>
+          <td colspan="3">لا يوجد معلمين</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
