@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}صفحة المعلمين{% endblock %}
+
+{% block content %}
+<h1>إضافة طالب</h1>
+<form method="post">
+    {% csrf_token %}
+    <table border="1" cellpadding="5" cellspacing="0">
+        <tr>
+            <th>الحقل</th>
+            <th>الإدخال</th>
+        </tr>
+        <tr>
+            <td>الاسم الأول</td>
+            <td><input type="text" name="first_name"></td>
+        </tr>
+        <tr>
+            <td>الاسم الثاني</td>
+            <td><input type="text" name="last_name"></td>
+        </tr>
+        <tr>
+            <td>GPA</td>
+            <td><input type="text" name="gpa"></td>
+        </tr>
+        <tr>
+            <td>المستوى</td>
+            <td><input type="number" name="level"></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align:center;">
+                <button type="submit">حفظ</button>
+            </td>
+        </tr>
+    </table>
+</form>
+
+{% endblock %}

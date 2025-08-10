@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}الصفحة الرئيسية{% endblock %}
+
+{% block content %}
+<h1>مرحبًا</h1>
+
+<ul>
+  <li><a href="{% url 'student:student_list' %}">الطلاب</a></li>
+  <li><a href="{% url 'teacher:teacher_list' %}">المعلمين</a></li>
+</ul>
+{% endblock %}

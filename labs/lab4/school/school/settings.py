@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'home',
     'teacher',
+    'student',
 
 ]
 
@@ -52,6 +54,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'school.urls'
+import os
+print("BASE_DIR:", BASE_DIR)
 
 TEMPLATES = [
     {

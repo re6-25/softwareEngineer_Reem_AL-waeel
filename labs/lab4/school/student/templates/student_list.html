@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}صفحة الطلاب{% endblock %}
+{% block content %}
+<h1>قائمة الطلاب</h1>
+<a href="{% url 'student:student_add' %}">إضافة طالب</a>
+<table border="1">
+    <tr>
+        <th>الاسم الأول</th>
+        <th>الاسم الثاني</th>
+        <th>GPA</th>
+        <th>المستوى</th>
+        <th>إجراءات</th>
+    </tr>
+    {% for s in students %}
+    <tr
+        
+          {% if s.gpa >= 85.0 %}
+            style="background-color: Green; color: white;"  
+          {% elif s.gpa >= 75.0 %}
+            style="background-color: Blue; color: white;"  
+          {% elif s.gpa >= 60.0 %}
+           style="background-color: Orange; color: white;" 
+          {% else %}
+             style="background-color: Red; color: white;" 
+          {% endif %}
+        >
+          <td>{{ s.first_name }}</td>
+        <td>{{ s.last_name }}</td>
+        <td>{{ s.gpa }}</td>
+        <td>{{ s.level }}</td>
+        <td>
+          <a href="{% url 'student:student_edit' s.id %}">تعديل</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
